@@ -43,8 +43,9 @@ async function handleContact(request, env) {
   const res = await fetch('https://api.resend.com/emails', {
     method: 'POST',
     headers: {
-      Authorization: `Bearer ${env.RESEND_API_KEY}`,
+      Authorization: `Bearer ${env.RESEND_API_KEY?.trim()}`,
       'Content-Type': 'application/json',
+      'User-Agent': 'lansero-contact-form/1.0',
     },
     body: JSON.stringify({
       from: `Lansero hemsida <${env.CONTACT_FROM}>`,
