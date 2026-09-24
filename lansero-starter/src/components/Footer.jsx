@@ -16,6 +16,7 @@ export default function Footer() {
             <p className="footer__heading">Sidor</p>
             <Link to="/tjanster">Tjänster</Link>
             <Link to="/pris">Pris</Link>
+            <Link to="/exempel">Exempel</Link>
             <Link to="/om-oss">Om oss</Link>
             <Link to="/kontakt">Kontakt</Link>
           </nav>

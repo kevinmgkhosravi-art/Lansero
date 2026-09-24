@@ -1,0 +1,30 @@
+.demo-badge {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  z-index: 200;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 40px;
+  padding: 0 14px;
+  border-radius: 999px;
+  background: rgba(14, 17, 15, 0.86);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  color: #F5ECC8;
+  font-family: 'Space Grotesk', system-ui, sans-serif;
+  font-size: 0.82rem;
+  font-weight: 500;
+  border: 1px solid rgba(245, 236, 200, 0.18);
+  box-shadow: 0 10px 30px -12px rgba(0, 0, 0, 0.5);
+}
+
+.demo-badge:hover { background: rgba(14, 17, 15, 0.96); }
+
+.demo-badge__dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #A9CDB8;
+}

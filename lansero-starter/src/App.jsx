@@ -10,6 +10,9 @@ import ContactPage from './pages/ContactPage'
 import PrivacyPage from './pages/PrivacyPage'
 import TermsPage from './pages/TermsPage'
 import NotFoundPage from './pages/NotFoundPage'
+import ExamplesPage from './pages/ExamplesPage'
+import HoneyDemo from './demos/honung/HoneyDemo'
+import BarberDemo from './demos/nordsax/BarberDemo'
 import { ROUTES } from './routes'
 
 const PAGES = {
@@ -17,6 +20,9 @@ const PAGES = {
   '/tjanster': ServicesPage,
   '/pris': PricingPage,
   '/om-oss': AboutPage,
+  '/exempel': ExamplesPage,
+  '/exempel/gyllene-kupan': HoneyDemo,
+  '/exempel/nordsax': BarberDemo,
   '/kontakt': ContactPage,
   '/integritetspolicy': PrivacyPage,
   '/villkor': TermsPage,
@@ -37,10 +43,13 @@ function ScrollManager() {
 }
 
 export default function App() {
+  const { pathname } = useLocation()
+  const isDemo = ROUTES.some((r) => r.demo && r.path === pathname)
+
   return (
     <div className="page">
       <ScrollManager />
-      <Navbar />
+      {!isDemo && <Navbar />}
       <main>
         <Routes>
           {ROUTES.map(({ path }) => {
@@ -50,7 +59,7 @@ export default function App() {
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </main>
-      <Footer />
+      {!isDemo && <Footer />}
     </div>
   )
 }

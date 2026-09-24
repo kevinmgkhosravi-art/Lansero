@@ -6,6 +6,7 @@ import './Overview.css'
 const LINKS = [
   { to: '/tjanster', title: 'Tjänster', text: 'Hemsida, hosting och support, SEO och e-handel. Och så går det till.' },
   { to: '/pris', title: 'Pris', text: `Hemsida från ${PRICE_FROM}. Hosting och support för ${PRICE_MONTHLY}.` },
+  { to: '/exempel', title: 'Exempel', text: 'En webbutik och en barbershop vi byggt som demo. Testa dem själv.' },
   { to: '/om-oss', title: 'Om oss', text: 'Varje hemsida byggs för hand, utan mallar.' },
 ]
 

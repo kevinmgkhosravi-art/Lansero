@@ -27,6 +27,28 @@ export const ROUTES = [
     description: 'Lansero är en webbyrå som bygger varje hemsida för hand, utan mallar. Grundad av Kevin Khosravi.',
   },
   {
+    path: '/exempel',
+    priority: 0.8,
+    title: 'Exempel | Lansero',
+    description: 'Demosidor byggda av Lansero: en webbutik för en bigård med kundvagn och en barbershop med onlinebokning.',
+  },
+  {
+    path: '/exempel/gyllene-kupan',
+    title: 'Gyllene Kupan | Demo av Lansero',
+    description: 'Demo av en webbutik för en bigård, byggd av Lansero. Företaget är påhittat.',
+    noindex: true,
+    sitemap: false,
+    demo: true,
+  },
+  {
+    path: '/exempel/nordsax',
+    title: 'Nordsax | Demo av Lansero',
+    description: 'Demo av en barbershop med onlinebokning, byggd av Lansero. Företaget är påhittat.',
+    noindex: true,
+    sitemap: false,
+    demo: true,
+  },
+  {
     path: '/kontakt',
     priority: 0.8,
     title: 'Kontakt | Lansero',

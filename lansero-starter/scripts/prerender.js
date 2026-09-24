@@ -1,5 +1,5 @@
 // Renders every route to static HTML after `vite build` and the SSR build.
-import { readFileSync, writeFileSync, rmSync } from 'node:fs'
+import { readFileSync, writeFileSync, rmSync, mkdirSync } from 'node:fs'
 import { fileURLToPath } from 'node:url'
 import { dirname, resolve } from 'node:path'
 
@@ -38,7 +38,9 @@ function buildPage(meta, url) {
 const outFile = (path) => (path === '/' ? 'index.html' : `${path.slice(1)}.html`)
 
 for (const meta of ROUTES) {
-  writeFileSync(resolve(dist, outFile(meta.path)), buildPage(meta, meta.path))
+  const file = resolve(dist, outFile(meta.path))
+  mkdirSync(dirname(file), { recursive: true })
+  writeFileSync(file, buildPage(meta, meta.path))
   console.log(`prerendered ${meta.path} -> ${outFile(meta.path)}`)
 }
 

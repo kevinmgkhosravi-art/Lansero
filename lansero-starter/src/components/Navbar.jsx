@@ -7,6 +7,7 @@ import './Navbar.css'
 const LINKS = [
   { to: '/tjanster', label: 'Tjänster' },
   { to: '/pris', label: 'Pris' },
+  { to: '/exempel', label: 'Exempel' },
   { to: '/om-oss', label: 'Om oss' },
   { to: '/kontakt', label: 'Kontakt' },
 ]

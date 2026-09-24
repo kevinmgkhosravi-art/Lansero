@@ -5,7 +5,7 @@ import { SITE_URL } from './src/siteConfig.js'
 
 function buildSitemap() {
   const lastmod = new Date().toISOString().slice(0, 10)
-  const urls = ROUTES.map(({ path, priority }) => [
+  const urls = ROUTES.filter((r) => r.sitemap !== false).map(({ path, priority }) => [
     '  <url>',
     `    <loc>${SITE_URL}${path}</loc>`,
     `    <lastmod>${lastmod}</lastmod>`,
