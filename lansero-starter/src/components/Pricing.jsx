@@ -1,23 +1,33 @@
 import { Link } from 'react-router-dom'
 import { ArrowRight } from '@phosphor-icons/react'
+import { PRICE_FROM } from '../siteConfig'
 import './Pricing.css'
 
-const FACTORS = [
+const OPTIONS = [
   {
-    title: 'Hur stor sidan är',
-    text: 'En enkel sida med några undersidor kostar mindre än en stor sajt med många sidor.',
+    title: 'Hemsida',
+    price: `Från ${PRICE_FROM}`,
+    text: 'Handbyggd för ditt företag och anpassad för både mobil och dator.',
   },
   {
-    title: 'Vad den ska kunna',
-    text: 'Bokning, webbutik, inloggning eller andra funktioner påverkar hur mycket arbete det blir.',
+    title: 'Hosting och domän',
+    price: 'Tillval',
+    text: 'Vi sköter driften och din adress, så att sidan ligger uppe och är säker.',
   },
   {
-    title: 'Text och bilder',
-    text: 'Har du eget material eller behöver du hjälp att ta fram det?',
+    title: 'Support och ändringar',
+    price: 'Tillval',
+    text: 'Ändringar och uppdateringar när du behöver dem.',
   },
   {
-    title: 'Tillval efter lanseringen',
-    text: 'Hosting, domän och support kan läggas till om du vill slippa sköta det själv.',
+    title: 'SEO',
+    price: 'Tillval',
+    text: 'Synlighet på Google när kunder söker efter det du erbjuder.',
+  },
+  {
+    title: 'E-handel',
+    price: 'Tillval',
+    text: 'En webbutik där dina kunder kan handla direkt på sidan.',
   },
 ]
 
@@ -27,12 +37,13 @@ export default function Pricing() {
       <div className="container pricing__layout">
         <div className="pricing__intro">
           <p className="section-label">Pris</p>
-          <h2 className="pricing__heading">Inga fasta paket. Ett pris vi kommer överens om.</h2>
+          <h2 className="pricing__heading">Från {PRICE_FROM}</h2>
           <p className="pricing__lead">
-            Varje hemsida är olika, så vi sätter inte samma pris på alla. Vi går
-            igenom vad du behöver och ger dig ett rimligt pris. Vi kommer
-            överens om det innan något arbete börjar, så att du vet vad du
-            betalar för.
+            Inga fasta paket. Priset utgår från vad din hemsida behöver, och du
+            vet exakt vad det kostar innan vi börjar.
+          </p>
+          <p className="pricing__note">
+            Köp bara hemsidan, eller låt oss sköta mer åt dig.
           </p>
           <Link to="/kontakt" className="btn btn-primary pricing__cta">
             Få ett gratis prisförslag
@@ -40,17 +51,17 @@ export default function Pricing() {
           </Link>
         </div>
 
-        <div>
-          <h3 className="pricing__sub">Det här påverkar priset</h3>
-          <dl className="pricing__factors">
-            {FACTORS.map(({ title, text }) => (
-              <div key={title} className="pricing__factor">
-                <dt>{title}</dt>
-                <dd>{text}</dd>
+        <ul className="pricing__options">
+          {OPTIONS.map(({ title, price, text }) => (
+            <li key={title} className="pricing__option">
+              <div className="pricing__option-head">
+                <h3>{title}</h3>
+                <span className={price === 'Tillval' ? 'pricing__tag' : 'pricing__price'}>{price}</span>
               </div>
-            ))}
-          </dl>
-        </div>
+              <p>{text}</p>
+            </li>
+          ))}
+        </ul>
       </div>
     </section>
   )

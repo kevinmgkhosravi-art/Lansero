@@ -38,8 +38,8 @@ export default function Contact() {
         <p className="section-label">Kontakt</p>
         <h1 className="contact__heading">Berätta om ditt projekt</h1>
         <p className="contact__intro">
-          Skriv några rader om vad du behöver, så hör vi av oss. Du kan också
-          ringa, mejla eller lägga till oss på Discord.
+          Skriv några rader om ditt företag och vad du behöver, så återkommer
+          vi med ett prisförslag. Du kan också ringa eller mejla oss direkt.
         </p>
 
         <div className="contact__grid">

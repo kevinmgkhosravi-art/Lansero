@@ -2,6 +2,7 @@ import { useEffect, useRef } from 'react'
 import gsap from 'gsap'
 import { Link } from 'react-router-dom'
 import { ArrowRight } from '@phosphor-icons/react'
+import { PRICE_FROM } from '../siteConfig'
 import './Hero.css'
 
 export default function Hero() {
@@ -22,14 +23,14 @@ export default function Hero() {
         gsap.timeline({ defaults: { ease: 'power1.out' } })
           .fromTo('.hero__video-layer', { opacity: 0 }, { opacity: 1, duration: 1.4 })
           .fromTo('.hero__title-line', { opacity: 0 }, { opacity: 1, duration: 0.8, stagger: 0.15 }, '-=0.6')
-          .fromTo('.hero__sub, .hero__actions', { opacity: 0 }, { opacity: 1, duration: 0.7, stagger: 0.15 }, '-=0.4')
+          .fromTo('.hero__sub, .hero__actions, .hero__meta', { opacity: 0 }, { opacity: 1, duration: 0.7, stagger: 0.15 }, '-=0.4')
         return
       }
       const tl = gsap.timeline({ defaults: { ease: 'power3.out' } })
       tl.fromTo('.hero__video-layer', { opacity: 0, scale: 1.12 }, { opacity: 1, scale: 1, duration: 1.8, ease: 'power2.out' })
         .fromTo('.hero__title-line', { opacity: 0, y: 34 }, { opacity: 1, y: 0, duration: 0.8, stagger: 0.14 }, '-=0.9')
         .fromTo('.hero__sub', { opacity: 0, y: 18 }, { opacity: 1, y: 0, duration: 0.65 }, '-=0.45')
-        .fromTo('.hero__actions', { opacity: 0, y: 18 }, { opacity: 1, y: 0, duration: 0.65 }, '-=0.5')
+        .fromTo('.hero__actions, .hero__meta', { opacity: 0, y: 18 }, { opacity: 1, y: 0, duration: 0.65, stagger: 0.15 }, '-=0.5')
     }, rootRef)
     return () => {
       document.removeEventListener('visibilitychange', onVisible)
@@ -71,6 +72,7 @@ export default function Hero() {
             <ArrowRight size={18} weight="bold" aria-hidden="true" />
           </a>
         </div>
+        <p className="hero__meta">Från {PRICE_FROM} · Inga fasta paket</p>
       </div>
 
       <a href="#tjanster" className="hero__scroll" aria-label="Scrolla till tjänster">

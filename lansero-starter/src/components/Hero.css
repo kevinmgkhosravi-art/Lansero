@@ -19,7 +19,8 @@
 .js .hero__video-layer,
 .js .hero__title-line,
 .js .hero__sub,
-.js .hero__actions {
+.js .hero__actions,
+.js .hero__meta {
   opacity: 0;
   animation: heroFallback 0s 4s forwards;
 }
@@ -89,6 +90,12 @@
   justify-content: center;
   align-items: center;
   gap: var(--space-2) var(--space-4);
+}
+
+.hero__meta {
+  margin-top: var(--space-3);
+  font-size: 0.92rem;
+  color: rgba(255,255,255,0.72);
 }
 
 .hero__scroll {

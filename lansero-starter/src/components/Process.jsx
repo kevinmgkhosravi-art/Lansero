@@ -2,24 +2,24 @@ import './Process.css'
 
 const STEPS = [
   {
-    title: 'Vi pratar',
-    text: 'Du berättar om ditt företag, dina kunder och vad sidan ska göra. Du förbinder dig inte till något.',
+    title: 'Samtal',
+    text: 'Du berättar om ditt företag och vad sidan ska uppnå. Det är kostnadsfritt och du binder dig inte till något.',
   },
   {
-    title: 'Förslag och pris',
-    text: 'Du får en offert med vad som ingår, vad det kostar och när det blir klart. Vi börjar inte förrän du har sagt ja.',
+    title: 'Prisförslag',
+    text: 'Du får ett pris och en tidsplan. Vi sätter igång först när du har sagt ja.',
   },
   {
     title: 'Design',
-    text: 'Vi tar fram hur sidan ska se ut. Du ser den innan något byggs och säger vad du vill ändra.',
+    text: 'Du ser hur sidan ska se ut och säger vad du vill ändra, innan vi börjar bygga.',
   },
   {
     title: 'Bygge',
-    text: 'Vi bygger sidan, gör den snabb och ser till att den fungerar i mobilen och syns på Google.',
+    text: 'Vi bygger sidan för hand, gör den snabb och ser till att den fungerar i mobilen och syns på Google.',
   },
   {
     title: 'Lansering',
-    text: 'När du har godkänt allt går sidan live. Vill du kan vi sköta hosting och hjälpa dig med ändringar efteråt.',
+    text: 'Sidan går live när du har godkänt den. Vill du kan vi sköta drift och ändringar efteråt.',
   },
 ]
 
@@ -28,7 +28,7 @@ export default function Process() {
     <section id="sa-gar-det-till" className="section process">
       <div className="container">
         <p className="section-label">Så går det till</p>
-        <h2 className="process__heading">Från första samtalet till färdig sida</h2>
+        <h2 className="process__heading">Från första samtal till färdig sida</h2>
 
         <ol className="process__steps">
           {STEPS.map(({ title, text }, i) => (

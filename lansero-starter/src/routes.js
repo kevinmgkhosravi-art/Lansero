@@ -6,7 +6,7 @@ export const ROUTES = [
     path: '/',
     priority: 1.0,
     title: 'Lansero | Skräddarsydda hemsidor',
-    description: 'Lansero i Norrköping designar och bygger skräddarsydda hemsidor från grunden, utan mallar. Design, utveckling, SEO, e-handel, hosting och support.',
+    description: 'Lansero i Norrköping skräddarsyr hemsidor efter ditt företag, utan mallar. Från 4 900 kr. Lägg till hosting, support, SEO eller e-handel efter behov.',
   },
   {
     path: '/kontakt',

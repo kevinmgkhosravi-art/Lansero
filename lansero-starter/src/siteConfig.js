@@ -15,6 +15,8 @@ export const COMPANY = {
   city: 'Norrköping',
 }
 
+export const PRICE_FROM = '4 900 kr'
+
 // Token from Cloudflare dashboard → Web Analytics → Add a site → Manage site. Empty turns analytics off.
 export const CF_ANALYTICS_TOKEN = ''
 
