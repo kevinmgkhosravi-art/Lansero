@@ -30,12 +30,11 @@ const SERVICES = [
 
 export default function Services() {
   return (
-    <section id="tjanster" className="section services">
+    <section className="section section--page-top services">
       <div className="container services__layout">
         <div className="services__intro">
-          <p className="section-label">Tjänster</p>
-          <h2 className="services__heading">Byggt för ditt företag. Inte för alla.</h2>
-          <p className="services__lead">
+          <h1 className="page-title services__heading">Byggt för ditt företag. Inte för alla.</h1>
+          <p className="page-lead services__lead">
             Vi börjar med hemsidan och du väljer själv vad du vill lägga till.
             Du betalar bara för det du behöver.
           </p>
@@ -50,7 +49,7 @@ export default function Services() {
               <div className="services__body">
                 <h3 className="services__title">
                   {title}
-                  {tag && <span className="services__tag">{tag}</span>}
+                  {tag && <span className={tag === 'Tillval' ? 'services__tag' : 'services__tag services__tag--price'}>{tag}</span>}
                 </h3>
                 <p className="services__text">{text}</p>
                 <ul className="services__points">

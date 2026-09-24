@@ -1,0 +1,42 @@
+.closing {
+  position: relative;
+  overflow: hidden;
+  background: #0B0F0C;
+  padding: var(--space-8) 0;
+}
+
+.closing__media {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(6, 12, 9, 0.88) 0%, rgba(6, 12, 9, 0.55) 55%, rgba(6, 12, 9, 0.25) 100%),
+    url('/images/forest.jpg') center / cover no-repeat;
+}
+
+.closing__inner { position: relative; }
+
+.closing__title {
+  font-size: clamp(2.4rem, 5.6vw, 4.2rem);
+  letter-spacing: -0.035em;
+  max-width: 12ch;
+  color: var(--color-white);
+}
+
+.closing__text {
+  margin-top: var(--space-3);
+  font-size: 1.12rem;
+  max-width: 42ch;
+  color: rgba(255, 255, 255, 0.84);
+}
+
+.closing__actions {
+  margin-top: var(--space-5);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2) var(--space-4);
+}
+
+@media (min-width: 960px) {
+  .closing { padding: calc(var(--space-8) + var(--space-4)) 0; }
+}

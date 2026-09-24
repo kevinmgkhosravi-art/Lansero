@@ -39,7 +39,7 @@ export default function Hero() {
   }, [])
 
   return (
-    <section id="top" className="hero" ref={rootRef}>
+    <section id="top" className="hero on-dark" ref={rootRef}>
       <div className="hero__video-layer" aria-hidden="true">
         <video
           ref={videoRef}
@@ -48,6 +48,7 @@ export default function Hero() {
           muted
           playsInline
           preload="auto"
+          poster="/images/hero-poster.jpg"
         >
           <source src="/videos/hero-waterfall.mp4" type="video/mp4" />
         </video>
@@ -67,15 +68,15 @@ export default function Hero() {
           <Link to="/kontakt" className="btn btn-primary">
             Få ett gratis prisförslag
           </Link>
-          <a href="#tjanster" className="btn-link">
+          <Link to="/tjanster" className="btn-link">
             Våra tjänster
             <ArrowRight size={18} weight="bold" aria-hidden="true" />
-          </a>
+          </Link>
         </div>
         <p className="hero__meta">Från {PRICE_FROM} · Inga fasta paket</p>
       </div>
 
-      <a href="#tjanster" className="hero__scroll" aria-label="Scrolla till tjänster">
+      <a href="#oversikt" className="hero__scroll" aria-label="Scrolla ner">
         <span className="hero__scroll-dot" />
       </a>
     </section>

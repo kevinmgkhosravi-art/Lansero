@@ -8,7 +8,6 @@ export default function TermsPage() {
 
   return (
     <LegalPage
-      label="Villkor"
       title="Allmänna villkor"
       intro={`Villkoren gäller när du anlitar ${COMPANY.name}${COMPANY.orgNumber ? ` (org.nr ${COMPANY.orgNumber})` : `, som drivs av ${COMPANY.owner}`}, för att ta fram en hemsida eller för tjänster som hosting och support. Står något annat i din offert eller ditt avtal gäller det före villkoren.`}
     >

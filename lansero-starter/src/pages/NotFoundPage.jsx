@@ -6,9 +6,8 @@ export default function NotFoundPage() {
   useSeo('/404')
 
   return (
-    <section className="section legal">
+    <section className="section section--page-top legal">
       <div className="container legal__inner">
-        <p className="section-label">404</p>
         <h1 className="legal__title">Sidan finns inte</h1>
         <p className="legal__intro">
           Länken kan vara fel eller så har sidan flyttats.

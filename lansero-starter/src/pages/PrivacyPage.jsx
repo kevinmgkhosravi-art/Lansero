@@ -8,7 +8,6 @@ export default function PrivacyPage() {
 
   return (
     <LegalPage
-      label="Integritet"
       title="Integritetspolicy"
       intro="Här förklarar vi vilka personuppgifter vi samlar in, varför vi gör det och vilka rättigheter du har. Vi samlar bara in det vi behöver för att kunna hjälpa dig."
     >

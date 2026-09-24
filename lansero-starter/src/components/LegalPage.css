@@ -1,12 +1,8 @@
-.section.legal {
-  padding-top: calc(var(--space-7) + 72px);
-}
-
 .legal__inner { max-width: 760px; }
 
 .legal__title {
-  margin-top: var(--space-2);
-  font-size: clamp(2.2rem, 5vw, 3.2rem);
+  font-size: clamp(2.4rem, 5.4vw, 3.6rem);
+  letter-spacing: -0.03em;
 }
 
 .legal__updated {
@@ -24,13 +20,15 @@
 
 .legal__body {
   margin-top: var(--space-5);
-  border-top: 1px solid rgba(255,255,255,0.14);
+  border-top: 2px solid var(--color-ink);
 }
 
 .legal__body h2 {
   margin-top: var(--space-5);
   font-size: clamp(1.3rem, 2.4vw, 1.6rem);
 }
+
+.legal__body > h2:first-child { margin-top: var(--space-4); }
 
 .legal__body p,
 .legal__body li {

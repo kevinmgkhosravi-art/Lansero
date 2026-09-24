@@ -1,44 +1,58 @@
 import { useEffect, useRef, useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, NavLink, useLocation } from 'react-router-dom'
 import { Phone } from '@phosphor-icons/react'
 import { CONTACT } from '../siteConfig'
 import './Navbar.css'
 
 const LINKS = [
-  { to: '/#tjanster', label: 'Tjänster' },
-  { to: '/#pris', label: 'Pris' },
-  { to: '/#om-oss', label: 'Om oss' },
+  { to: '/tjanster', label: 'Tjänster' },
+  { to: '/pris', label: 'Pris' },
+  { to: '/om-oss', label: 'Om oss' },
   { to: '/kontakt', label: 'Kontakt' },
 ]
 
 export default function Navbar() {
+  const { pathname } = useLocation()
   const [open, setOpen] = useState(false)
   const [hidden, setHidden] = useState(false)
+  const [overDark, setOverDark] = useState(pathname === '/')
+  const [scrolled, setScrolled] = useState(false)
   const lastY = useRef(0)
   const close = () => setOpen(false)
 
   useEffect(() => {
+    const measure = () => {
+      const y = window.scrollY
+      const hero = document.querySelector('.hero')
+      setOverDark(Boolean(hero) && hero.getBoundingClientRect().bottom > 72)
+      setScrolled(y > 8)
+      const delta = y - lastY.current
+      if (Math.abs(delta) > 6) {
+        setHidden(delta > 0 && y > 120)
+        lastY.current = y
+      }
+    }
     let frame = 0
     const onScroll = () => {
       cancelAnimationFrame(frame)
-      frame = requestAnimationFrame(() => {
-        const y = window.scrollY
-        const delta = y - lastY.current
-        if (Math.abs(delta) > 6) {
-          setHidden(delta > 0 && y > 120)
-          lastY.current = y
-        }
-      })
+      frame = requestAnimationFrame(measure)
     }
+    measure()
+    setOpen(false)
     window.addEventListener('scroll', onScroll, { passive: true })
     return () => {
       cancelAnimationFrame(frame)
       window.removeEventListener('scroll', onScroll)
     }
-  }, [])
+  }, [pathname])
+
+  const classes = ['navbar']
+  if (overDark) classes.push('on-dark')
+  else if (scrolled || open) classes.push('navbar--solid')
+  if (hidden && !open) classes.push('navbar--hidden')
 
   return (
-    <header className={`navbar${hidden && !open ? ' navbar--hidden' : ''}`}>
+    <header className={classes.join(' ')}>
       <div className="container navbar__inner">
         <Link to="/" className="navbar__logo" aria-label="Lansero, till startsidan" onClick={close}>
           Lansero
@@ -46,7 +60,7 @@ export default function Navbar() {
 
         <nav className="navbar__links" aria-label="Huvudmeny">
           {LINKS.map((link) => (
-            <Link key={link.to} to={link.to}>{link.label}</Link>
+            <NavLink key={link.to} to={link.to}>{link.label}</NavLink>
           ))}
         </nav>
 
@@ -79,9 +93,9 @@ export default function Navbar() {
       {open && (
         <nav className="navbar__mobile" aria-label="Mobilmeny">
           {LINKS.map((link) => (
-            <Link key={link.to} to={link.to} onClick={close}>
+            <NavLink key={link.to} to={link.to} onClick={close}>
               {link.label}
-            </Link>
+            </NavLink>
           ))}
           <Link to="/kontakt" className="btn btn-primary" onClick={close}>
             Gratis prisförslag

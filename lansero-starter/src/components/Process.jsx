@@ -25,9 +25,8 @@ const STEPS = [
 
 export default function Process() {
   return (
-    <section id="sa-gar-det-till" className="section process">
+    <section id="sa-gar-det-till" className="section section--soft process">
       <div className="container">
-        <p className="section-label">Så går det till</p>
         <h2 className="process__heading">Från första samtal till färdig sida</h2>
 
         <ol className="process__steps">

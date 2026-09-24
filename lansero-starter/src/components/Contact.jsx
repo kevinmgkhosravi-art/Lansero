@@ -33,11 +33,10 @@ export default function Contact() {
   }
 
   return (
-    <section id="kontakt" className="section contact">
+    <section className="section section--page-top contact">
       <div className="container">
-        <p className="section-label">Kontakt</p>
-        <h1 className="contact__heading">Berätta om ditt projekt</h1>
-        <p className="contact__intro">
+        <h1 className="page-title contact__heading">Berätta om ditt projekt</h1>
+        <p className="page-lead contact__intro">
           Skriv några rader om ditt företag och vad du behöver, så återkommer
           vi med ett prisförslag. Du kan också ringa eller mejla oss direkt.
         </p>
@@ -46,7 +45,7 @@ export default function Contact() {
           <div className="contact__cards">
             <a
               href={`mailto:${CONTACT.email}`}
-              className="bar bar-dark contact__card"
+              className="contact__card"
             >
               <Envelope size={26} weight="bold" aria-hidden="true" />
               <div>
@@ -57,7 +56,7 @@ export default function Contact() {
 
             <a
               href={`tel:${CONTACT.phone.replace(/\s+/g, '')}`}
-              className="bar bar-dark contact__card"
+              className="contact__card"
             >
               <Phone size={26} weight="bold" aria-hidden="true" />
               <div>
@@ -70,7 +69,7 @@ export default function Contact() {
               href={`https://discord.com/users/${CONTACT.discordUserId}`}
               target="_blank"
               rel="noreferrer"
-              className="bar bar-dark contact__card"
+              className="contact__card"
             >
               <DiscordLogo size={26} weight="bold" aria-hidden="true" />
               <div>

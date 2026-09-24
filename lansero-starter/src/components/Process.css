@@ -1,6 +1,5 @@
 .process__heading {
-  margin-top: var(--space-2);
-  max-width: 18ch;
+  max-width: 16ch;
   text-wrap: balance;
 }
 
@@ -9,24 +8,25 @@
   margin-top: var(--space-6);
   display: grid;
   gap: var(--space-4);
+  counter-reset: step;
 }
 
 .process__step {
   padding-top: var(--space-3);
-  border-top: 1px solid rgba(255,255,255,0.14);
+  border-top: 2px solid var(--color-ink);
 }
 
 .process__num {
-  font-family: var(--font-display);
-  font-weight: 600;
-  font-size: 0.95rem;
-  color: var(--color-sky);
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 0.9rem;
+  color: var(--color-ink-muted);
   font-variant-numeric: tabular-nums;
 }
 
 .process__title {
   margin-top: var(--space-2);
-  font-size: 1.25rem;
+  font-size: 1.3rem;
 }
 
 .process__text {

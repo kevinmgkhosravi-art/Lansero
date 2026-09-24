@@ -1,14 +1,11 @@
-import { Link } from 'react-router-dom'
-import { ArrowRight } from '@phosphor-icons/react'
 import './About.css'
 
 export default function About() {
   return (
-    <section id="om-oss" className="section about">
+    <section className="section section--page-top about">
       <div className="container about__layout">
         <div>
-          <p className="section-label">Om oss</p>
-          <h2 className="about__heading">Varje hemsida byggs för hand.</h2>
+          <h1 className="page-title about__heading">Varje hemsida byggs för hand.</h1>
         </div>
 
         <div className="about__body">
@@ -36,11 +33,6 @@ export default function About() {
             Kevin Khosravi
             <span>Grundare, Lansero</span>
           </p>
-
-          <Link to="/kontakt" className="btn btn-primary about__cta">
-            Få ett gratis prisförslag
-            <ArrowRight size={18} weight="bold" aria-hidden="true" />
-          </Link>
         </div>
       </div>
     </section>

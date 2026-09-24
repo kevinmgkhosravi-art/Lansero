@@ -3,6 +3,9 @@ import { Routes, Route, useLocation } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import HomePage from './pages/HomePage'
+import ServicesPage from './pages/ServicesPage'
+import PricingPage from './pages/PricingPage'
+import AboutPage from './pages/AboutPage'
 import ContactPage from './pages/ContactPage'
 import PrivacyPage from './pages/PrivacyPage'
 import TermsPage from './pages/TermsPage'
@@ -11,6 +14,9 @@ import { ROUTES } from './routes'
 
 const PAGES = {
   '/': HomePage,
+  '/tjanster': ServicesPage,
+  '/pris': PricingPage,
+  '/om-oss': AboutPage,
   '/kontakt': ContactPage,
   '/integritetspolicy': PrivacyPage,
   '/villkor': TermsPage,
