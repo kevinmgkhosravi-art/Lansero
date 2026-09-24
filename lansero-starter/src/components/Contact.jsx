@@ -74,7 +74,6 @@ export default function Contact() {
               <DiscordLogo size={26} weight="bold" aria-hidden="true" />
               <div>
                 <h3>Lägg till oss på Discord</h3>
-                <p>Öppna profilen och skicka en vänförfrågan</p>
               </div>
             </a>
           </div>

@@ -68,7 +68,7 @@
 
 .hero__title {
   font-size: clamp(2.6rem, 6.4vw, 4.4rem);
-  color: var(--color-white);
+  color: var(--color-ink);
   text-wrap: balance;
   text-shadow: 0 4px 28px rgba(0,0,0,0.4);
 }

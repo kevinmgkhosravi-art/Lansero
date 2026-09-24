@@ -12,8 +12,7 @@ export default function About() {
           <p className="about__lead">
             Lansero är en webbyrå som skräddarsyr hemsidor efter varje kund. Vi
             utgår från ditt företag, dina kunder och vad sidan ska uppnå, och
-            bygger därifrån. Inga färdiga mallar, varken från sidbyggare eller
-            AI-verktyg.
+            bygger därifrån. Inga färdiga mallar.
           </p>
           <p>
             Du bestämmer själv hur mycket vi ska ta hand om. Vissa vill bara ha

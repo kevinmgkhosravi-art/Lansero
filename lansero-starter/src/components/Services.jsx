@@ -5,7 +5,7 @@ const SERVICES = [
   {
     title: 'Skräddarsydd hemsida',
     tag: `Från ${PRICE_FROM}`,
-    text: 'Designad och byggd för hand, från första skiss till färdig sida. Inga färdiga mallar, varken från sidbyggare eller AI-verktyg. Du betalar en gång och sidan är din.',
+    text: 'Designad och byggd för hand, från första skiss till färdig sida. Inga färdiga mallar. Du betalar en gång och sidan är din.',
     points: ['Egen design', 'Anpassad för mobil', 'Snabb laddning', 'Kontaktformulär'],
   },
   {

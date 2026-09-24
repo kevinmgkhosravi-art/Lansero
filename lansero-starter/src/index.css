@@ -1,6 +1,6 @@
 :root {
-  --color-bg: #F6F0DC;
-  --color-bg-soft: #EDE3C6;
+  --color-bg: #EEE4C1;
+  --color-bg-soft: #E3D7AE;
   --color-ink: #151714;
   --color-ink-muted: #56594F;
   --color-line: rgba(21, 23, 20, 0.13);
@@ -8,7 +8,7 @@
   --color-accent: #1F4A33;
   --color-error: #A8321F;
   --btn-bg: #151714;
-  --btn-fg: #F6F0DC;
+  --btn-fg: #EEE4C1;
   --color-black: #14140F;
   --color-white: #FFFFFF;
   --radius-sheet: 28px;
@@ -36,7 +36,7 @@
   --color-line-strong: rgba(238, 236, 230, 0.34);
   --color-accent: #A9CDB8;
   --color-error: #F2A59E;
-  --btn-bg: #FFFFFF;
+  --btn-bg: #F5ECC8;
   --btn-fg: #121412;
   color: var(--color-ink);
 }
