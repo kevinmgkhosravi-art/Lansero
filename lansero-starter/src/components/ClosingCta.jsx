@@ -11,7 +11,7 @@ export default function ClosingCta() {
 
   useEffect(() => {
     const video = videoRef.current
-    if (!video || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
+    if (!video) return
 
     const toLoopStart = () => {
       video.currentTime = LOOP_START
