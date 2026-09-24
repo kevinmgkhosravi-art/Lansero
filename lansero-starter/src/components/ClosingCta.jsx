@@ -4,7 +4,7 @@ import { ArrowRight, Phone } from '@phosphor-icons/react'
 import { CONTACT } from '../siteConfig'
 import './ClosingCta.css'
 
-const LOOP_START = 6
+const LOOP_START = 9
 
 export default function ClosingCta() {
   const videoRef = useRef(null)
