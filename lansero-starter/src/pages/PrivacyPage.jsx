@@ -14,8 +14,11 @@ export default function PrivacyPage() {
     >
       <h2>Vem ansvarar för dina uppgifter?</h2>
       <p>
-        {COMPANY.name}, organisationsnummer {COMPANY.orgNumber}, {COMPANY.address},
-        är personuppgiftsansvarig. Du når oss på{' '}
+        {COMPANY.name}
+        {COMPANY.orgNumber
+          ? `, organisationsnummer ${COMPANY.orgNumber}`
+          : `, som drivs av ${COMPANY.owner}`}
+        , {COMPANY.address}, är personuppgiftsansvarig. Du når oss på{' '}
         <a href={`mailto:${CONTACT.email}`}>{CONTACT.email}</a>.
       </p>
 

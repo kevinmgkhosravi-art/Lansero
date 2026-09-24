@@ -6,7 +6,7 @@ export const ROUTES = [
     path: '/',
     priority: 1.0,
     title: 'Lansero | Skräddarsydda hemsidor',
-    description: 'Lansero designar och bygger hemsidor från grunden, utan mallar. Design, utveckling, SEO, e-handel, hosting och support.',
+    description: 'Lansero i Norrköping designar och bygger skräddarsydda hemsidor från grunden, utan mallar. Design, utveckling, SEO, e-handel, hosting och support.',
   },
   {
     path: '/kontakt',

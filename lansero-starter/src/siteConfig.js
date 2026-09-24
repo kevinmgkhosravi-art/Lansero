@@ -8,9 +8,11 @@ export const CONTACT = {
 }
 
 export const COMPANY = {
-  name: 'Lansero', // TODO: juridiskt namn, t.ex. "Lansero AB" eller namnet på den enskilda firman
-  orgNumber: 'XXXXXX-XXXX', // TODO: organisationsnummer
-  address: 'Gatuadress, 123 45 Ort', // TODO: postadress
+  name: 'Lansero',
+  owner: 'Kevin Khosravi',
+  orgNumber: '', // Fyll i när företaget är registrerat; tomt döljer det på sajten.
+  address: 'Rågången 73, 602 08 Norrköping',
+  city: 'Norrköping',
 }
 
 // Token from Cloudflare dashboard → Web Analytics → Add a site → Manage site. Empty turns analytics off.

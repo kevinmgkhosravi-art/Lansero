@@ -1,20 +1,96 @@
-.about__bar {
-  max-width: 780px;
-  margin: 0 auto;
-  text-align: center;
-  padding: var(--space-5) 0;
+.about__layout {
+  display: grid;
+  gap: var(--space-4);
 }
 
-.about__bar h2 {
+.about__heading {
   margin-top: var(--space-2);
+  font-size: clamp(2rem, 4.2vw, 3.2rem);
+  max-width: 14ch;
   text-wrap: balance;
 }
 
-.about__text {
-  margin: var(--space-3) auto 0;
-  max-width: 56ch;
+.about__body p {
   color: var(--color-ink-muted);
-  font-size: 1.08rem;
+  font-size: 1.05rem;
+  max-width: 60ch;
 }
 
+.about__body p + p { margin-top: var(--space-3); }
+
+.about__body .about__lead {
+  color: var(--color-ink);
+  font-size: clamp(1.15rem, 1.8vw, 1.3rem);
+  line-height: 1.55;
+}
+
+.about__facts {
+  margin-top: var(--space-6);
+  display: grid;
+  border-top: 1px solid rgba(255,255,255,0.14);
+}
+
+.about__fact {
+  padding: var(--space-3) 0;
+  border-bottom: 1px solid rgba(255,255,255,0.14);
+}
+
+.about__fact dt {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(1.6rem, 3.2vw, 2.4rem);
+  letter-spacing: -0.02em;
+  color: var(--color-ink);
+}
+
+.about__fact dd {
+  margin-top: 0.2rem;
+  color: var(--color-ink-muted);
+  font-size: 0.95rem;
+}
+
+.about__founder {
+  margin-top: var(--space-6);
+  display: grid;
+  gap: var(--space-3);
+}
+
+.about__founder-title {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 0.85rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-sky);
+}
+
+.about__founder h3 {
+  margin-top: var(--space-1);
+  font-size: clamp(1.8rem, 3.4vw, 2.6rem);
+}
+
+.about__founder-text p {
+  color: var(--color-ink-muted);
+  font-size: 1.05rem;
+  max-width: 60ch;
+}
+
+.about__founder-text p + p { margin-top: var(--space-2); }
+
 .about__cta { margin-top: var(--space-4); }
+
+@media (min-width: 760px) {
+  .about__facts { grid-template-columns: repeat(3, 1fr); }
+  .about__fact { padding: var(--space-4) var(--space-3) var(--space-4) 0; border-bottom: none; }
+  .about__fact + .about__fact { padding-left: var(--space-3); border-left: 1px solid rgba(255,255,255,0.14); }
+  .about__facts { border-bottom: 1px solid rgba(255,255,255,0.14); }
+}
+
+@media (min-width: 960px) {
+  .about__layout,
+  .about__founder {
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: var(--space-7);
+    align-items: start;
+  }
+}
