@@ -1,0 +1,51 @@
+.pricing__layout {
+  display: grid;
+  gap: var(--space-5);
+}
+
+.pricing__heading {
+  margin-top: var(--space-2);
+  max-width: 18ch;
+  text-wrap: balance;
+}
+
+.pricing__lead {
+  margin-top: var(--space-3);
+  font-size: 1.08rem;
+  color: var(--color-ink-muted);
+}
+
+.pricing__cta { margin-top: var(--space-4); }
+
+.pricing__sub {
+  font-size: 1.05rem;
+  font-family: var(--font-body);
+  font-weight: 600;
+  color: var(--color-ink-muted);
+  padding-bottom: var(--space-2);
+  border-bottom: 1px solid rgba(255,255,255,0.14);
+}
+
+.pricing__factor {
+  padding: var(--space-3) 0;
+  border-bottom: 1px solid rgba(255,255,255,0.14);
+}
+
+.pricing__factor dt {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.15rem;
+}
+
+.pricing__factor dd {
+  margin-top: 0.35rem;
+  color: var(--color-ink-muted);
+}
+
+@media (min-width: 960px) {
+  .pricing__layout {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-7);
+    align-items: start;
+  }
+}

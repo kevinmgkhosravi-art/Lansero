@@ -1,8 +1,50 @@
+import { useEffect } from 'react'
+import { Routes, Route, useLocation } from 'react-router-dom'
+import Navbar from './components/Navbar'
+import Footer from './components/Footer'
+import HomePage from './pages/HomePage'
+import ContactPage from './pages/ContactPage'
+import PrivacyPage from './pages/PrivacyPage'
+import TermsPage from './pages/TermsPage'
+import NotFoundPage from './pages/NotFoundPage'
+import { ROUTES } from './routes'
+
+const PAGES = {
+  '/': HomePage,
+  '/kontakt': ContactPage,
+  '/integritetspolicy': PrivacyPage,
+  '/villkor': TermsPage,
+}
+
+function ScrollManager() {
+  const { pathname, hash } = useLocation()
+
+  useEffect(() => {
+    if (hash) {
+      document.getElementById(hash.slice(1))?.scrollIntoView()
+    } else {
+      window.scrollTo({ top: 0, behavior: 'instant' })
+    }
+  }, [pathname, hash])
+
+  return null
+}
+
 export default function App() {
   return (
-    <main className="wrap">
-      <h1>Lansero</h1>
-      <p>Live och redo att byggas. 🚀</p>
-    </main>
+    <div className="page">
+      <ScrollManager />
+      <Navbar />
+      <main>
+        <Routes>
+          {ROUTES.map(({ path }) => {
+            const Page = PAGES[path]
+            return <Route key={path} path={path} element={<Page />} />
+          })}
+          <Route path="*" element={<NotFoundPage />} />
+        </Routes>
+      </main>
+      <Footer />
+    </div>
   )
 }
