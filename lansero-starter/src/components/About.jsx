@@ -15,13 +15,15 @@ export default function About() {
           <p className="about__lead">
             Lansero är en webbyrå som skräddarsyr hemsidor efter varje kund. Vi
             utgår från ditt företag, dina kunder och vad sidan ska uppnå, och
-            bygger därifrån. Inga mallar och inga AI-genererade standardsidor.
+            bygger därifrån. Inga färdiga mallar, varken från sidbyggare eller
+            AI-verktyg.
           </p>
           <p>
             Du bestämmer själv hur mycket vi ska ta hand om. Vissa vill bara ha
-            en hemsida. Andra vill att vi också sköter drift, ändringar och
-            synlighet på Google. Oavsett vilket vet du vad det kostar innan vi
-            börjar.
+            en hemsida. Andra vill att vi också sköter drift och support, och
+            kan ringa oss dygnet runt när något behöver ändras. Oavsett vilket
+            vet du vad det kostar innan vi börjar, och vi är inte klara förrän
+            du är nöjd.
           </p>
           <p>
             Lansero leds av grundaren Kevin Khosravi, som kombinerar flera års

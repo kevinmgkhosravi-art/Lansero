@@ -7,17 +7,12 @@ const OPTIONS = [
   {
     title: 'Hemsida',
     price: `Från ${PRICE_FROM}`,
-    text: 'Handbyggd för ditt företag och anpassad för både mobil och dator.',
+    text: 'Engångskostnad. Handbyggd för ditt företag och anpassad för både mobil och dator.',
   },
   {
-    title: 'Hosting och domän',
-    price: 'Tillval',
-    text: 'Vi sköter driften och din adress, så att sidan ligger uppe och är säker.',
-  },
-  {
-    title: 'Support och ändringar',
-    price: 'Tillval',
-    text: 'Ändringar och uppdateringar när du behöver dem.',
+    title: 'Hosting och support',
+    price: 'Per månad',
+    text: 'Fast månadskostnad. Vi driftar sidan och du kan ringa oss dygnet runt för ändringar och hjälp. Ingen bindningstid.',
   },
   {
     title: 'SEO',
@@ -39,11 +34,13 @@ export default function Pricing() {
           <p className="section-label">Pris</p>
           <h2 className="pricing__heading">Från {PRICE_FROM}</h2>
           <p className="pricing__lead">
-            Inga fasta paket. Priset utgår från vad din hemsida behöver, och du
-            vet exakt vad det kostar innan vi börjar.
+            Inga fasta paket. Hemsidan betalar du en gång, och priset utgår
+            från vad just din sida behöver. Du vet exakt vad det kostar innan
+            vi börjar.
           </p>
           <p className="pricing__note">
-            Köp bara hemsidan, eller låt oss sköta mer åt dig.
+            Vill du att vi sköter drift och support betalar du en fast
+            månadskostnad, utan bindningstid.
           </p>
           <Link to="/kontakt" className="btn btn-primary pricing__cta">
             Få ett gratis prisförslag
@@ -56,7 +53,7 @@ export default function Pricing() {
             <li key={title} className="pricing__option">
               <div className="pricing__option-head">
                 <h3>{title}</h3>
-                <span className={price === 'Tillval' ? 'pricing__tag' : 'pricing__price'}>{price}</span>
+                <span className={price.startsWith('Från') ? 'pricing__price' : 'pricing__tag'}>{price}</span>
               </div>
               <p>{text}</p>
             </li>

@@ -5,8 +5,14 @@ const SERVICES = [
   {
     title: 'Skräddarsydd hemsida',
     tag: `Från ${PRICE_FROM}`,
-    text: 'Designad och byggd för hand, från första skiss till färdig sida. Ingen mall och ingen AI-genererad standardsida, utan en hemsida som bara ditt företag har.',
+    text: 'Designad och byggd för hand, från första skiss till färdig sida. Inga färdiga mallar, varken från sidbyggare eller AI-verktyg. Du betalar en gång och sidan är din.',
     points: ['Egen design', 'Anpassad för mobil', 'Snabb laddning', 'Kontaktformulär'],
+  },
+  {
+    title: 'Hosting och support',
+    tag: 'Fast pris per månad',
+    text: 'Vi driftar din sida och finns tillgängliga dygnet runt. Ring när du vill, så fixar vi fel och gör ändringar åt dig. Ingen bindningstid.',
+    points: ['Hosting och domän', 'SSL-certifikat', 'Support dygnet runt', 'Ändringar ingår'],
   },
   {
     title: 'SEO och synlighet',
@@ -19,18 +25,6 @@ const SERVICES = [
     tag: 'Tillval',
     text: 'En webbutik som är enkel att handla i för dina kunder och enkel att sköta för dig.',
     points: ['Produktsidor', 'Betalning', 'Frakt', 'Orderhantering'],
-  },
-  {
-    title: 'Hosting och domän',
-    tag: 'Tillval',
-    text: 'Vi sköter driften, så att sidan ligger uppe och är säker. Har du redan ett webbhotell fungerar det också.',
-    points: ['Hosting', 'Domän', 'SSL-certifikat'],
-  },
-  {
-    title: 'Underhåll och support',
-    tag: 'Tillval',
-    text: 'Behöver du ändra något eller lägga till en sida gör vi det åt dig. Du slipper lära dig tekniken själv.',
-    points: ['Uppdateringar', 'Ändringar', 'Hjälp när något krånglar'],
   },
 ]
 

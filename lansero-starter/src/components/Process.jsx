@@ -3,7 +3,7 @@ import './Process.css'
 const STEPS = [
   {
     title: 'Samtal',
-    text: 'Du berättar om ditt företag och vad sidan ska uppnå. Det är kostnadsfritt och du binder dig inte till något.',
+    text: 'Du berättar om ditt företag och vad sidan ska uppnå. Samtalet är alltid kostnadsfritt och du binder dig inte till något.',
   },
   {
     title: 'Prisförslag',
@@ -11,7 +11,7 @@ const STEPS = [
   },
   {
     title: 'Design',
-    text: 'Du ser hur sidan ska se ut och säger vad du vill ändra, innan vi börjar bygga.',
+    text: 'Du ser hur sidan ska se ut innan vi bygger den, och vi jobbar med den tills du är nöjd.',
   },
   {
     title: 'Bygge',
@@ -19,7 +19,7 @@ const STEPS = [
   },
   {
     title: 'Lansering',
-    text: 'Sidan går live när du har godkänt den. Vill du kan vi sköta drift och ändringar efteråt.',
+    text: 'Sidan går live när du är nöjd. Med vår hosting kan du sedan ringa oss dygnet runt för ändringar och hjälp.',
   },
 ]
 

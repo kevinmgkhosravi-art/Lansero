@@ -26,9 +26,11 @@ export default function TermsPage() {
         extra arbete utan att du har godkänt det.
       </p>
       <p>
-        Betalning sker mot faktura enligt de betalningsvillkor som står i
-        offerten och på fakturan. Vid sen betalning har vi rätt att ta ut
-        dröjsmålsränta enligt räntelagen och lagstadgad påminnelseavgift.
+        Hemsidan betalas som en engångskostnad. Hosting och support betalas
+        med en fast månadskostnad. Betalning sker mot faktura enligt de
+        betalningsvillkor som står i offerten och på fakturan. Vid sen
+        betalning har vi rätt att ta ut dröjsmålsränta enligt räntelagen och
+        lagstadgad påminnelseavgift.
       </p>
 
       <h2>3. Det här behöver vi från dig</h2>
@@ -41,9 +43,9 @@ export default function TermsPage() {
 
       <h2>4. Leverans och godkännande</h2>
       <p>
-        Du får se sidan och lämna synpunkter innan den publiceras. Antalet
-        ändringsrundor som ingår står i offerten. När du har godkänt sidan
-        publicerar vi den.
+        Du får se sidan och lämna synpunkter innan den publiceras. Vi arbetar
+        med sidan tills du är nöjd, inom ramen för det som ingår i offerten.
+        När du har godkänt sidan publicerar vi den.
       </p>
 
       <h2>5. Vem som äger vad</h2>
@@ -58,12 +60,21 @@ export default function TermsPage() {
         tredje part följer sina egna licenser och villkor.
       </p>
 
-      <h2>6. Hosting, domän och support</h2>
+      <h2>6. Hosting och support</h2>
       <p>
-        Hosting, domän och support är tillval som du kan beställa separat. Pris,
-        vad som ingår och uppsägningstid står i offerten. Vi använder
-        leverantörer för drift och kan inte ansvara för avbrott hos dem, men vi
-        hjälper dig att lösa problemet om något händer.
+        Hosting och support är ett tillval med en fast månadskostnad som står i
+        offerten. Det finns ingen bindningstid. Uppsägningstiden är en månad
+        räknat från den dag vi tar emot din uppsägning. Vill du flytta sidan
+        till ett annat webbhotell hjälper vi dig med det.
+      </p>
+      <p>
+        Med hosting och support kan du ringa oss dygnet runt. Vi rättar fel och
+        gör ändringar på sidan som ingår i abonnemanget. Större tillägg, som
+        nya funktioner eller en webbutik, ger vi dig ett pris på först.
+      </p>
+      <p>
+        Vi använder leverantörer för drift och kan inte ansvara för avbrott hos
+        dem, men vi hjälper dig att lösa problemet om något händer.
       </p>
 
       <h2>7. Ansvar</h2>
