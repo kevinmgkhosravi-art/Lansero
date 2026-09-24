@@ -68,7 +68,7 @@ export default function TermsPage() {
         till ett annat webbhotell hjälper vi dig med det.
       </p>
       <p>
-        Med hosting och support kan du ringa oss dygnet runt. Vi rättar fel och
+        Med hosting och support når du oss dygnet runt, alla dagar. Vi rättar fel och
         gör ändringar på sidan som ingår i abonnemanget. Större tillägg, som
         nya funktioner eller en webbutik, ger vi dig ett pris på först.
       </p>

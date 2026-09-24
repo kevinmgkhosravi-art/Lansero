@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import { ArrowRight } from '@phosphor-icons/react'
-import { PRICE_FROM } from '../siteConfig'
+import { PRICE_FROM, PRICE_MONTHLY } from '../siteConfig'
 import './Pricing.css'
 
 const OPTIONS = [
@@ -11,8 +11,8 @@ const OPTIONS = [
   },
   {
     title: 'Hosting och support',
-    price: 'Per månad',
-    text: 'Fast månadskostnad. Vi driftar sidan och du kan ringa oss dygnet runt för ändringar och hjälp. Ingen bindningstid.',
+    price: PRICE_MONTHLY,
+    text: 'Drift, säkerhet och support dygnet runt, alla dagar. Ändringar ingår och det finns ingen bindningstid.',
   },
   {
     title: 'SEO',
@@ -39,8 +39,8 @@ export default function Pricing() {
             vi börjar.
           </p>
           <p className="pricing__note">
-            Vill du att vi sköter drift och support betalar du en fast
-            månadskostnad, utan bindningstid.
+            Vill du att vi sköter drift och support kostar det {PRICE_MONTHLY},
+            utan bindningstid.
           </p>
           <Link to="/kontakt" className="btn btn-primary pricing__cta">
             Få ett gratis prisförslag
@@ -53,7 +53,7 @@ export default function Pricing() {
             <li key={title} className="pricing__option">
               <div className="pricing__option-head">
                 <h3>{title}</h3>
-                <span className={price.startsWith('Från') ? 'pricing__price' : 'pricing__tag'}>{price}</span>
+                <span className={price === 'Tillval' ? 'pricing__tag' : 'pricing__price'}>{price}</span>
               </div>
               <p>{text}</p>
             </li>

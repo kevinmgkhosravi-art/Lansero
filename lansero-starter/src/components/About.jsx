@@ -21,7 +21,7 @@ export default function About() {
           <p>
             Du bestämmer själv hur mycket vi ska ta hand om. Vissa vill bara ha
             en hemsida. Andra vill att vi också sköter drift och support, och
-            kan ringa oss dygnet runt när något behöver ändras. Oavsett vilket
+            når oss dygnet runt när något behöver ändras. Oavsett vilket
             vet du vad det kostar innan vi börjar, och vi är inte klara förrän
             du är nöjd.
           </p>

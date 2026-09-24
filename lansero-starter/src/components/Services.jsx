@@ -1,4 +1,4 @@
-import { PRICE_FROM } from '../siteConfig'
+import { PRICE_FROM, PRICE_MONTHLY } from '../siteConfig'
 import './Services.css'
 
 const SERVICES = [
@@ -10,8 +10,8 @@ const SERVICES = [
   },
   {
     title: 'Hosting och support',
-    tag: 'Fast pris per månad',
-    text: 'Vi driftar din sida och finns tillgängliga dygnet runt. Ring när du vill, så fixar vi fel och gör ändringar åt dig. Ingen bindningstid.',
+    tag: PRICE_MONTHLY,
+    text: 'Vi sköter driften av din sida och du når oss dygnet runt, alla dagar. Behöver något fixas eller ändras löser vi det åt dig. Ingen bindningstid.',
     points: ['Hosting och domän', 'SSL-certifikat', 'Support dygnet runt', 'Ändringar ingår'],
   },
   {

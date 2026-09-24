@@ -19,7 +19,7 @@ const STEPS = [
   },
   {
     title: 'Lansering',
-    text: 'Sidan går live när du är nöjd. Med vår hosting kan du sedan ringa oss dygnet runt för ändringar och hjälp.',
+    text: 'Sidan går live när du är nöjd. Med hosting och support når du oss sedan dygnet runt, alla dagar.',
   },
 ]
 

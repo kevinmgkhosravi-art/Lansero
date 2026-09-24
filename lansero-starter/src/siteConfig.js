@@ -16,6 +16,7 @@ export const COMPANY = {
 }
 
 export const PRICE_FROM = '4 900 kr'
+export const PRICE_MONTHLY = '499 kr/mån'
 
 // Token from Cloudflare dashboard → Web Analytics → Add a site → Manage site. Empty turns analytics off.
 export const CF_ANALYTICS_TOKEN = ''
