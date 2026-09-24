@@ -4,19 +4,12 @@ import { ArrowRight, Phone } from '@phosphor-icons/react'
 import { CONTACT } from '../siteConfig'
 import './ClosingCta.css'
 
-const LOOP_START = 9
-
 export default function ClosingCta() {
   const videoRef = useRef(null)
 
   useEffect(() => {
     const video = videoRef.current
     if (!video) return
-
-    const toLoopStart = () => {
-      video.currentTime = LOOP_START
-      video.play().catch(() => {})
-    }
 
     const observer = new IntersectionObserver(([entry]) => {
       if (!entry.isIntersecting) {
@@ -25,18 +18,13 @@ export default function ClosingCta() {
       }
       if (!video.src) {
         video.preload = 'auto'
-        video.addEventListener('loadedmetadata', () => { video.currentTime = LOOP_START }, { once: true })
-        video.src = '/videos/hero-waterfall.mp4'
+        video.src = '/videos/waterfall-loop.mp4'
       }
       video.play().catch(() => {})
     }, { rootMargin: '300px 0px' })
 
-    video.addEventListener('ended', toLoopStart)
     observer.observe(video)
-    return () => {
-      observer.disconnect()
-      video.removeEventListener('ended', toLoopStart)
-    }
+    return () => observer.disconnect()
   }, [])
 
   return (
@@ -45,6 +33,7 @@ export default function ClosingCta() {
         ref={videoRef}
         className="closing__video"
         muted
+        loop
         playsInline
         preload="none"
         poster="/images/forest.jpg"
