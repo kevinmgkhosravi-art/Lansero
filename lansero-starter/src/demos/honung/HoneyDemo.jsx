@@ -70,7 +70,9 @@ export default function HoneyDemo() {
       </header>
 
       <section id="top" className="hk-hero">
-        <div className="hk-wrap hk-hero__grid">
+        <div className="hk-hero__frame">
+          <DemoVideo className="hk-hero__video" src={`${V}/hero.mp4`} poster={`${V}/hero.jpg`} eager />
+          <div className="hk-hero__shade" aria-hidden="true" />
           <div className="hk-hero__content">
             <p className="hk-hero__kicker">Bigård i Kolmården sedan 1987</p>
             <h1 className="hk-hero__title">Honung som smakar <em>sommar.</em></h1>
@@ -79,21 +81,16 @@ export default function HoneyDemo() {
               Opastöriserad, oblandad och slungad för hand.
             </p>
             <div className="hk-hero__actions">
-              <a href="#honung" className="hk-btn hk-btn--gold">Handla honung <ArrowRight size={18} weight="bold" aria-hidden="true" /></a>
-              <a href="#besok" className="hk-btn hk-btn--ghost">Besök gårdsbutiken</a>
+              <a href="#honung" className="hk-btn hk-btn--honey">Handla honung <ArrowRight size={18} weight="bold" aria-hidden="true" /></a>
+              <a href="#besok" className="hk-btn hk-btn--light">Besök gårdsbutiken</a>
             </div>
           </div>
-          <div className="hk-hero__media">
-            <div className="hk-hero__arch">
-              <DemoVideo className="hk-hero__video" src={`${V}/hero.mp4`} poster={`${V}/hero.jpg`} eager />
-            </div>
-            <svg className="hk-seal" viewBox="0 0 120 120" aria-hidden="true">
-              <defs><path id="hk-seal-path" d="M60,60 m-44,0 a44,44 0 1,1 88,0 a44,44 0 1,1 -88,0" /></defs>
-              <circle cx="60" cy="60" r="58" />
-              <text><textPath href="#hk-seal-path">NY SKÖRD 2026 · NY SKÖRD 2026 ·</textPath></text>
-              <path d="M60 44 l12 7 v14 l-12 7 l-12 -7 v-14 z" />
-            </svg>
-          </div>
+          <svg className="hk-seal" viewBox="0 0 120 120" aria-hidden="true">
+            <defs><path id="hk-seal-path" d="M60,60 m-44,0 a44,44 0 1,1 88,0 a44,44 0 1,1 -88,0" /></defs>
+            <circle cx="60" cy="60" r="58" />
+            <text><textPath href="#hk-seal-path">NY SKÖRD 2026 · NY SKÖRD 2026 ·</textPath></text>
+            <path d="M60 44 l12 7 v14 l-12 7 l-12 -7 v-14 z" />
+          </svg>
         </div>
       </section>
 
