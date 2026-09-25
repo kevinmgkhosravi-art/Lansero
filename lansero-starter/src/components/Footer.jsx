@@ -25,7 +25,6 @@ export default function Footer() {
             <p className="footer__heading">Kontakt</p>
             <a href={`mailto:${CONTACT.email}`}>{CONTACT.email}</a>
             <a href={`tel:${CONTACT.phone.replace(/\s+/g, '')}`}>{CONTACT.phone}</a>
-            <span>{COMPANY.city}</span>
           </div>
 
           <nav className="footer__col" aria-label="Juridiskt">
